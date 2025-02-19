@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clonar repositório') {
             steps {
-                git branch: 'main', 'https://github.com/vagnerwentz/SpringBootAgronomia.git'
+                git url: 'https://github.com/vagnerwentz/SpringBootAgronomia.git', branch: 'main'
             }
         }
 
