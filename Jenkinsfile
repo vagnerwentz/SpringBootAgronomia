@@ -18,7 +18,7 @@ pipeline {
         
         stage('Clonar repositório') {
             steps {
-                git 'https://github.com/ricardosobjak/devops-springboot-api.git'
+                git 'https://github.com/vagnerwentz/SpringBootAgronomia.git'
             }
         }
 
@@ -30,7 +30,7 @@ pipeline {
 
         stage('Construir Imagem Docker') {
             steps {
-                sh 'docker build -t ${IMAGE_NAME}:latest .'
+                sh 'docker build --platform=linux/amd64 -t ${IMAGE_NAME}:latest .'
             }
         }
 
