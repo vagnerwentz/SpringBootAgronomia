@@ -15,11 +15,12 @@ pipeline {
                 '''
             }
         }
-        // stage('Clonar repositório') {
-        //     steps {
-        //         git url: 'https://github.com/vagnerwentz/SpringBootAgronomia.git', branch: 'main'
-        //     }
-        // }
+        
+        stage('Clonar repositório') {
+            steps {
+                git 'https://github.com/ricardosobjak/devops-springboot-api.git'
+            }
+        }
 
         // stage('Construir JAR com Maven') {
         //     steps {
