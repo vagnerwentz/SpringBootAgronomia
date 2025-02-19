@@ -18,9 +18,11 @@ pipeline {
         
         stage('Clonar repositório') {
             steps {
-                git 'https://github.com/vagnerwentz/SpringBootAgronomia.git'
+                git branch: 'main', url: 'https://github.com/vagnerwentz/SpringBootAgronomia.git'
             }
         }
+
+        
 
         stage('Construir JAR com Maven') {
             steps {
