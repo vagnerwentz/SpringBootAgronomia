@@ -7,7 +7,7 @@ WORKDIR /app
 COPY target/Agronomia-0.0.1-SNAPSHOT.jar app.jar
 
 # Expondo a porta onde a aplicação irá rodar
-EXPOSE 8080
+EXPOSE 8081
 
 # Comando para rodar a aplicação
 CMD ["java", "-jar", "app.jar"]
